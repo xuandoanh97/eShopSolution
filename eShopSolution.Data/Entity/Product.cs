@@ -16,6 +16,9 @@ namespace eShopSolution.Data.Entity
         public DateTime DateCroated { get; set; }
         public string SeoAlias { get; set; }
 
+        public List<ProductInCatelogy> productInCatelogies { get; set; }
+
+        public List<OrderDetail> orderDetails { get; set; }
 
 
 

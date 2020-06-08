@@ -12,5 +12,7 @@ namespace eShopSolution.Data.Entity
        public bool IsShowOnHome  { set; get; }
        public int ParenId  { set; get; }
        public Status Status { set; get; }
+       public List<ProductInCatelogy> productInCatelogies { get; set; }
+
     }
 }
