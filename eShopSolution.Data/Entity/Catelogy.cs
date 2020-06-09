@@ -11,8 +11,9 @@ namespace eShopSolution.Data.Entity
        public int SortOrder  { set; get; }
        public bool IsShowOnHome  { set; get; }
        public int ParenId  { set; get; }
-       public Status Status { set; get; }
+       public Status Status { set; get; } 
        public List<ProductInCatelogy> productInCatelogies { get; set; }
+       public List<CatelogyTranslation> catelogyTranslations { get; set; }
 
     }
 }
