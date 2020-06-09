@@ -18,8 +18,6 @@ namespace eShopSolution.Data.Configurations
             builder.HasOne(t => t.catelogy).WithMany(pc => pc.productInCatelogies)
                 .HasForeignKey(pc => pc.CatelogyId);
 
-
-
         }
     }
 }

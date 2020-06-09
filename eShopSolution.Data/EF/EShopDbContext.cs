@@ -24,5 +24,9 @@ namespace eShopSolution.Data.EF
         }
         public DbSet<Product> Products { get; set; }
         public DbSet<Catelogy> Catelogies { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderDetail> OrderDetails {get; set;}
+        public DbSet<ProductInCatelogy> ProductInCatelogies { get; set;}
     }
 }
+
