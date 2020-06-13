@@ -35,7 +35,6 @@ namespace eShopSolution.Data.EF
 
             //Data sending
             modelBuilder.Seed();
-
             //Base.Onmode
         }
         public DbSet<AppConfig> appConfigs { get; set; }

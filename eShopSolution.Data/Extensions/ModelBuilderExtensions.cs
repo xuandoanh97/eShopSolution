@@ -5,6 +5,8 @@ using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Windows.Markup;
+
 
 namespace eShopSolution.Data.Extensions
 {
@@ -39,7 +41,7 @@ namespace eShopSolution.Data.Extensions
                     SortOrder = 2,
                     Status = Status.Active,
                 }
-                
+ 
                 );
             modelBuilder.Entity<CatelogyTranslation>().HasData(
                 new CatelogyTranslation()
@@ -51,8 +53,6 @@ namespace eShopSolution.Data.Extensions
                 { Id = 3, CatelogyId = 2, Name = "Áo nữ", LanguageId = "vi-VN", SeoAlias = "ao-nu", SeoDescription = "Sản phẩm thời trang nữ", SeoTitle = "Sản phẩm áo thời trang nữ" },
                 new CatelogyTranslation()
                 { Id = 4, CatelogyId = 2, Name = "Women shirt", LanguageId = "vi-VN", SeoAlias = "Women-shirt", SeoDescription = "The shirt products for women", SeoTitle = "The shirt products for women" }
-
-
             );
             //Product
             modelBuilder.Entity<Product>().HasData(
@@ -64,11 +64,20 @@ namespace eShopSolution.Data.Extensions
                     Price = 200000,
                     Stock = 0,
                     ViewCount = 0,
+                },
+                new Product()
+                {
+                    Id = 2,
+                    DateCroated = DateTime.Now,
+                    OriginalPrice = 100000,
+                    Price = 200000,
+                    Stock = 0,
+                    ViewCount = 0,
                 });
             modelBuilder.Entity<ProductTranslation>().HasData(
                         new ProductTranslation()
                         {
-                            Id=1,
+                            Id = 1,
                             ProductId = 1,
                             Name = "Áo sơ mi nam trắng Việt Tiến",
                             LanguageId = "vi-VN",
@@ -77,11 +86,12 @@ namespace eShopSolution.Data.Extensions
                             SeoTitle = "Áo sơ mi nam trắng Việt Tiến",
                             Details = "Áo sơ mi nam trắng Việt Tiến",
                             Description = "Áo sơ mi nam trắng Việt Tiến"
-                        },
+                        }
+                        ,
                         new ProductTranslation()
                         {
-                            Id=2,
-                            ProductId = 1,
+                            Id = 2,
+                            ProductId = 2,
                             Name = "Viet Tien men t-shirt",
                             LanguageId = "vi-VN",
                             SeoAlias = "viet-tien-men-t-shirt ",
@@ -89,12 +99,24 @@ namespace eShopSolution.Data.Extensions
                             SeoTitle = "Viet Tien men t-shirt",
                             Details = "Viet Tien men t-shirt",
                             Description = "Viet Tien men t-shirt"
+                        },
+                        new ProductTranslation()
+                        {
+                            Id = 3,
+                            ProductId = 1,
+                            Name = "Adam store",
+                            LanguageId = "vi-VN",
+                            SeoAlias = "adam-store",
+                            SeoDescription = "The suit for men",
+                            SeoTitle = "The suit for men",
+                            Details = "The suit for men",
+                            Description = "The suit for men",
                         }
                     );
-            modelBuilder.Entity<ProductTranslation>().HasData(
-                new ProductInCatelogy() { ProductId = 1, CatelogyId = 1 }
+   
+            modelBuilder.Entity<ProductInCatelogy>().HasData(
+                new ProductInCatelogy() {CatelogyId = 1, ProductId = 1}
                 );
-
         }
     }
 
